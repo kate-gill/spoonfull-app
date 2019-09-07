@@ -1,0 +1,255 @@
+body {
+  position: relative;
+  font-family: 'Playfair Display', serif;
+  background: url(https://images.unsplash.com/photo-1447078806655-40579c2520d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+    
+/* Main page, on opening */
+
+.content {
+  min-height: calc(100vh - 70px);
+}
+  
+#mainContainer {
+  padding-right: 0;
+}
+
+.container-fluid {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.opening {
+  text-align: center;
+  padding-top: 40vh;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.searchInput {
+  margin-top: 15px;
+  width: 50%;
+  height: 60px;
+  display: inline;
+  border: 1px solid #677f67;
+  outline: none;
+  margin-bottom: 15px;
+}
+
+.mainBtn {
+  background:  rgba(44, 69, 83, 0.9);
+  color: #FEFDFF;
+  border: 1px solid #FEFDFF;
+  padding: 15px 30px;
+  display: inline-block;
+  font-size: 18px;
+  border-radius: 5px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+button:hover, .topBtn:hover {
+  border: 1px solid #FEFDFF;
+  background: #FEFDFF;
+  color: #2a414f;
+  outline: none;
+}
+
+#searchForm:focus, #searchInput:focus, button:focus, button:active {
+  outline: none;
+  box-shadow: none;
+}
+
+/* In search mode (top navigation) */
+
+.hide {
+  display: none;
+}
+
+.searchMode {
+  float: left;
+  text-align: center;
+  overflow: hidden;
+  background: rgb(44, 69, 83);
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+  z-index: 1000;
+}
+
+.searchInputTop {
+  margin-top: 15px;
+  height: 40px !important;
+  width: 50%;
+  display: inline;
+  border: 1px solid #677f67;
+  outline: none;
+  margin-bottom: 15px;
+}
+
+.topBtn {
+  background:  rgba(44, 69, 83, 0.5);
+  color: #FEFDFF;
+  border: 1px solid #FEFDFF;
+  padding: 10px 25px;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.backgroundTop {
+  width: 100%;
+  background: rgb(44, 69, 83);
+}
+
+
+/* Recipe cards container */
+
+#recipeList {
+  padding-top: 10vh;
+  margin-top: -4rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.row {
+  margin-right: 0 !important;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  background: rgb(54, 78, 98);
+}
+
+#row {
+  width: 60%;
+  text-align: center;
+  margin: 0 auto !important;
+}
+
+
+
+/* Recipe cards */
+
+.card {
+  height: 100%;
+  padding: 4%;
+  margin: 2%;
+  border-radius: 10px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  background: rgba(44, 69, 83, 0.5);
+  min-width: 80px;
+}
+
+.card-img-top{
+  border-radius: 5%;
+  margin-top: 10px;
+  width: 90%;
+}
+
+.info-card {
+  text-align: center;
+  margin: 10px;
+  -webkit-perspective: 600px;
+}
+
+.info-card:hover .back {
+  -webkit-transform: rotateY(0);
+}
+  
+.info-card:hover .front {
+  -webkit-transform: rotateY(180deg);
+}
+  
+.front, .back {
+  background: #FFF;
+  border-radius: 10px;
+  transition: -webkit-transform 1s;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  text-align: center;
+  margin: 0 auto;
+  height: 350px;
+}
+  
+.front {
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+}
+  
+.back {
+  position: relative;
+  padding-top: 0px;
+  -webkit-transform: rotateY(-180deg);
+  overflow: scroll;
+}
+
+
+@media screen and (max-width: 992px) and (min-width: 600px) {
+  .card {
+    width: 353px;
+    text-align: center;
+    margin: 0 auto !important;
+  }
+}
+
+.btn-info {
+  margin-bottom: 10px;
+}
+
+
+/* Headings */
+
+.myH1 {
+  font-size: 65px;
+  color: #FEFDFF;
+}
+
+.card-title {
+  margin-top: 8px;
+  padding: 4px;
+  font-weight: bold;
+}
+
+.cardBack {
+  font-weight: bold;
+  padding: 2.5px;
+  color: #2a414f;
+  text-decoration: underline;
+}
+
+h4 {
+  font-weight: bold;
+  color: #2a414f;
+  margin: 10px;
+}
+
+h6 {
+  margin: 10px;
+}
+ 
+
+/* Footer */
+
+.footer {
+  margin-top: 25px;
+  text-align: center;
+  height: 45px;
+  background: rgba(44, 69, 83, 0.5);
+}
+
+#pFooter {
+  padding-top: 12px;
+  font-size: 14px;
+  color: #FEFDFF;
+}
